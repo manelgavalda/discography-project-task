@@ -3,7 +3,7 @@
 use App\Models\LP;
 use App\Models\Artist;
 
-test('an_artist_has_many_lps', function () {
+test('it_has_many_lps', function () {
     $artist = Artist::factory()->create();
 
     $artist->lps()->createMany(

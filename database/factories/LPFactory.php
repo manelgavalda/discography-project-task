@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Artist;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,6 +20,7 @@ class LPFactory extends Factory
         return [
             'name' => fake()->name(),
             'description' => fake()->text(),
+            'artist_id' => Artist::factory(),
         ];
     }
 }
