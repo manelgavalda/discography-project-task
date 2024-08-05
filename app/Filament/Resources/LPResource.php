@@ -35,7 +35,8 @@ class LPResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\Select::make('artist_id')
                     ->required()
-                    ->options(Artist::all()->pluck('name', 'id')),
+                    ->options(Artist::all()->pluck('name', 'id'))
+                    ->label('Artist'),
             ]);
     }
 
