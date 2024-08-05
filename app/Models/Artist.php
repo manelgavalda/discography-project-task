@@ -10,4 +10,9 @@ class Artist extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'description'];
+
+    public function lps()
+    {
+        return $this->hasMany(LP::class);
+    }
 }
