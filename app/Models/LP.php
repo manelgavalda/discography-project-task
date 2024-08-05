@@ -9,7 +9,7 @@ class LP extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'description', 'artist_id'];
 
     public function artist()
     {
