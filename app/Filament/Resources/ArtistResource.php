@@ -38,7 +38,8 @@ class ArtistResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('lps_count')
-                    ->counts('lps'),
+                    ->counts('lps')
+                    ->label('LP Count'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
