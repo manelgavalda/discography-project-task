@@ -66,7 +66,8 @@ class LPResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->searchPlaceholder('Search by Artist');
     }
 
     public static function getRelations(): array
