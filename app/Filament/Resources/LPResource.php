@@ -18,7 +18,7 @@ class LPResource extends Resource
 {
     protected static ?string $model = LP::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-circle-stack';
 
     public static function form(Form $form): Form
     {
@@ -41,9 +41,7 @@ class LPResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('artist_id')
-                    ->numeric()
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('artist.name'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
