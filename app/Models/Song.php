@@ -10,4 +10,9 @@ class Song extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function authors()
+    {
+        return $this->belongsToMany(Author::class);
+    }
 }

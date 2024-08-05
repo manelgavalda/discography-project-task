@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\LP;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class SongFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'l_p_id' => LP::factory(),
         ];
     }
 }
