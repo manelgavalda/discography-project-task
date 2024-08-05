@@ -18,6 +18,10 @@ class LPResource extends Resource
 {
     protected static ?string $model = LP::class;
 
+    public static ?string $label = 'LP';
+
+    public static ?string $pluralLabel = 'LPs';
+
     protected static ?string $navigationIcon = 'heroicon-o-circle-stack';
 
     public static function form(Form $form): Form
