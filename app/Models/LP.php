@@ -23,6 +23,12 @@ class LP extends Model
 
     protected function getAuthorNamesAttribute()
     {
-        return $this->songs->flatMap->authors->unique('id')->implode('name', ', ');
+        $authors = $this->songs->flatMap->authors;
+
+        if($authors->isEmpty()) {
+            return 'No authors available for this LP';
+        }
+
+        return $authors->unique('name')->implode('name', ', ');
     }
 }
