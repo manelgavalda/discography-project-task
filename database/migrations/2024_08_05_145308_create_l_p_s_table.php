@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->foreignId('artist_id')->constrained();
+            $table->foreignId('artist_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

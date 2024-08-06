@@ -29,9 +29,9 @@ class LPResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Select::make('artist')
+                Forms\Components\Select::make('artist_id')
                     ->required()
-                    ->relationship(titleAttribute: 'name'),
+                    ->relationship(name: 'artist', titleAttribute: 'name'),
             ]);
     }
 
