@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Models\LP;
+use App\Models\Song;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Artist;
@@ -30,10 +31,12 @@ class LPResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Select::make('artist_id')
+                Forms\Components\Select::make('artist')
                     ->required()
-                    ->options(Artist::all()->pluck('name', 'id'))
-                    ->label('Artist'),
+                    ->relationship(titleAttribute: 'name'),
+                Forms\Components\Select::make('songs')
+                    ->multiple()
+                    ->relationship(titleAttribute: 'name')
             ]);
     }
 
