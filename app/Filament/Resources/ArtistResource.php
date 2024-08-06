@@ -37,6 +37,8 @@ class ArtistResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('description')
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('lps_count')
                     ->counts('lps')
                     ->label('LP Count')

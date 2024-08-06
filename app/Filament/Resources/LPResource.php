@@ -45,6 +45,8 @@ class LPResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('description')
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('artist.name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
