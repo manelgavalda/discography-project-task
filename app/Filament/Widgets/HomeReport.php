@@ -22,10 +22,13 @@ class HomeReport extends BaseWidget
                 LP::query()
             )
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('artist.name'),
+                TextColumn::make('name')
+                    ->sortable(),
+                TextColumn::make('artist.name')
+                    ->sortable(),
                 TextColumn::make('songs_count')
-                    ->counts('songs'),
+                    ->counts('songs')
+                    ->sortable(),
                 TextColumn::make('author_names'),
             ]);
     }
