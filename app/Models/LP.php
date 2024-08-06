@@ -25,10 +25,8 @@ class LP extends Model
     {
         $authors = $this->songs->flatMap->authors;
 
-        if($authors->isEmpty()) {
-            return 'No authors available for this LP';
-        }
-
-        return $authors->unique('name')->implode('name', ', ');
+        return $authors->isEmpty()
+            ? 'No authors available for this LP'
+            : $authors->unique('name')->implode('name', ', ');
     }
 }
