@@ -39,7 +39,9 @@ class ArtistResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('lps_count')
                     ->counts('lps')
-                    ->label('LP Count'),
+                    ->label('LP Count')
+                    ->url(fn (Artist $artist) => route('filament.app.resources.l-p-s.index', ['tableSearch' => $artist->name]))
+                    ->icon('heroicon-o-eye'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
