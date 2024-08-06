@@ -3,10 +3,8 @@
 namespace App\Filament\Resources;
 
 use App\Models\LP;
-use App\Models\Song;
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Artist;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
