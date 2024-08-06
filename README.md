@@ -85,6 +85,12 @@ The project includes the following main tables:
 
 ## Usage
 
+### Login
+
+- Use the following credentials to log in:
+  - **Email**: admin@gmail.com
+  - **Password**: 1234
+
 ### Home Page
 
     - **Dashboard**: View a report with LP name, artist name, number of songs, and authors.
