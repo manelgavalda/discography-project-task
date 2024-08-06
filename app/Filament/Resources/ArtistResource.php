@@ -2,16 +2,13 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ArtistResource\Pages;
-use App\Filament\Resources\ArtistResource\RelationManagers;
-use App\Models\Artist;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Artist;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Resources\Resource;
+use App\Filament\Resources\ArtistResource\Pages;
 
 class ArtistResource extends Resource
 {
@@ -36,14 +33,15 @@ class ArtistResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->wrap(),
                 Tables\Columns\TextColumn::make('lps_count')
                     ->counts('lps')
                     ->label('LP Count')
-                    ->url(fn (Artist $artist) => route('filament.app.resources.l-p-s.index', ['tableSearch' => $artist->name]))
-                    ->icon('heroicon-o-eye'),
+                    ->icon('heroicon-o-eye')
+                    ->url(fn (Artist $artist) => route('filament.app.resources.l-p-s.index', ['tableSearch' => $artist->name])),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -53,9 +51,6 @@ class ArtistResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->filters([
-                //
-            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -64,13 +59,6 @@ class ArtistResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array
