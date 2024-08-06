@@ -32,9 +32,6 @@ class LPResource extends Resource
                 Forms\Components\Select::make('artist')
                     ->required()
                     ->relationship(titleAttribute: 'name'),
-                Forms\Components\Select::make('songs')
-                    ->multiple()
-                    ->relationship(titleAttribute: 'name')
             ]);
     }
 
