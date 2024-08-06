@@ -59,6 +59,13 @@ This project is a Laravel application designed to manage a discography database,
     npm run dev
     ```
 
+8. **Start the development server**:
+    ```sh
+    php artisan serve
+    ```
+
+The application will be available at `http://localhost:8000`.
+
 ## Database Schema
 
 The project includes the following main tables:
