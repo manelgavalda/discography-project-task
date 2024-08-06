@@ -23,15 +23,18 @@ class HomeReport extends BaseWidget
             )
             ->columns([
                 TextColumn::make('name')
+                    ->label('LP')
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('artist.name')
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('songs_count')
+                    ->label('Songs')
                     ->counts('songs')
                     ->sortable(),
-                TextColumn::make('author_names'),
+                TextColumn::make('author_names')
+                    ->label('Authors'),
             ]);
     }
 }
