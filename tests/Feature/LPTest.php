@@ -6,11 +6,11 @@ use function Pest\Livewire\livewire;
 use App\Filament\Resources\LPResource\Pages\ListLPS;
 
 it('can_be_filtered_by_artist', function () {
-    $lps = LP::factory()->count(2)->create([
+    $megadethLps = LP::factory()->count(2)->create([
         'artist_id' => Artist::factory()->create(['name' => 'Megadeth'])
     ]);
 
-    LP::factory()->count(3)->create([
+    $metallicaLps = LP::factory()->count(3)->create([
         'artist_id' => Artist::factory()->create(['name' => 'Metallica'])
     ]);
 
@@ -19,5 +19,6 @@ it('can_be_filtered_by_artist', function () {
 
     livewire(ListLPS::class, ['tableSearch' => 'Megadeth'])
         ->assertCountTableRecords(2)
-        ->assertCanSeeTableRecords($lps);
+        ->assertCanSeeTableRecords($megadethLps)
+        ->assertCanNotSeeTableRecords($metallicaLps);
 });
