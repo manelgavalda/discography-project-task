@@ -15,7 +15,7 @@ class HomeReport extends BaseWidget
     {
         return $table
             ->query(
-                LP::query()
+                LP::query()->with('songs.authors')
             )
             ->columns([
                 TextColumn::make('name')
