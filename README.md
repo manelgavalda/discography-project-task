@@ -15,7 +15,7 @@ This project is a Laravel application designed to manage a discography database,
 
 - PHP 8.0 or higher
 - Composer
-- MySQL or any other supported database
+- SQLite or any other supported database
 - Node.js and npm (for frontend assets)
 
 ## Installation
@@ -29,7 +29,6 @@ This project is a Laravel application designed to manage a discography database,
 2. **Install dependencies**:
     ```sh
     composer install
-    npm install
     ```
 
 3. **Set up environment variables**:
@@ -55,7 +54,9 @@ This project is a Laravel application designed to manage a discography database,
     ```
 
 7. **Compile frontend assets**:
+    If you plan to make changes to the JavaScript or CSS files, install Node.js dependencies and compile the assets:
     ```sh
+    npm install
     npm run dev
     ```
 
