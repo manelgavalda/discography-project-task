@@ -15,4 +15,9 @@ class Artist extends Model
     {
         return $this->hasMany(LP::class);
     }
+
+    protected function getLpsRouteAttribute()
+    {
+        return route('filament.app.resources.l-p-s.index', ['tableSearch' => $this->name]);
+    }
 }
