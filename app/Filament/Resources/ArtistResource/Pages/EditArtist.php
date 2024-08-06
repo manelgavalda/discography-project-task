@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources\ArtistResource\Pages;
 
-use App\Filament\Resources\ArtistResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use App\Filament\Resources\ArtistResource;
 
 class EditArtist extends EditRecord
 {

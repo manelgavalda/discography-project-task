@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources\ArtistResource\Pages;
 
-use App\Filament\Resources\ArtistResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use App\Filament\Resources\ArtistResource;
 
 class ListArtists extends ListRecords
 {

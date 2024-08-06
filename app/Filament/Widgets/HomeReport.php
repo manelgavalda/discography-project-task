@@ -3,8 +3,8 @@
 namespace App\Filament\Widgets;
 
 use App\Models\LP;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Widgets\TableWidget as BaseWidget;
 
 class HomeReport extends BaseWidget
