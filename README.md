@@ -85,11 +85,26 @@ The project includes the following main tables:
 
 ## Usage
 
-### Viewing LPs and Songs
+### Home Page
 
-- Visit the `/artists` route to view a list of artists.
-- Click on an artist to view their LPs.
-- Click on an LP to view the songs and their authors.
+    - **Dashboard**: View a report with LP name, artist name, number of songs, and authors.
+
+### Navigation
+
+    - **Menu**: Manage artists or LPs from the home page menu.
+
+### Managing Artists
+
+    - **Artists Page**:
+      - Perform CRUD operations (name, description).
+      - View total LPs for each artist.
+      - Link to the LPs associated with the artist.
+
+### Managing LPs
+
+    - **LPs Page**:
+      - Perform CRUD operations (name, description).
+      - Filter LPs by artist name.
 
 ### Adding Data
 
