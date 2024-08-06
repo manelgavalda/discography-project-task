@@ -1,8 +1,8 @@
 <?php
 
-use App\Models\Author;
 use App\Models\LP;
 use App\Models\Song;
+use App\Models\Author;
 
 test('it_belongs_to_an_artist', function () {
     $lp = LP::factory()->create();

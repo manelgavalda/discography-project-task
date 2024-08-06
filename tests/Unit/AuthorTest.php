@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Author;
 use App\Models\Song;
+use App\Models\Author;
 
 test('it_has_many_songs', function () {
     $author = Author::factory()->create();
